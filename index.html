@@ -18,6 +18,7 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 	<body>
 		<header>
@@ -52,6 +53,10 @@
 					<h1 class="chain">Hello My name Is</h1>
 					<p class="text-intro">Andreas Daru Suryanata</p>
 				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<canvas id="canvasChart"></canvas>
+				</div>
+
 			</div>
 		</div>
 		<div class="container-fluid">
@@ -268,6 +273,33 @@
 				</div>
 			</div>
 		</footer>
+
+
+		<!-- canvasjs script -->
+		<script>
+			const ctx = document.getElementById('canvasChart').getContext('2d');
+
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+				labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+				datasets: [{
+					label: '# of Votes',
+					data: [3, 6, 8, 5, 6, 10],
+					borderWidth: 1
+				}]
+				},
+				options: {
+				scales: {
+					y: {
+					beginAtZero: true
+					}
+				}
+				}
+			});
+		</script>
+
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
