@@ -2,7 +2,9 @@
 <html lang="en">
 	<?php
 	require_once 'connection.php';
-	?>	
+
+	include 'form_sub.php';
+	?>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -225,9 +227,20 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 sign-up">
 						<h2 class="logo-header">Stay on the saddle!</h2>
-						<form name="signup-form">
-							<input class="signup-input" type="email" name="email_address" value="" placeholder="enter your email..." title="Please enter a valid email address." required>
-							<button type="submit" class="submit-btn">GO</button>
+						
+						<!-- Display feedback message if set -->
+						<?php if (!empty($status_msg)): ?>
+							<p style="margin-bottom: 15px; font-weight: bold;"><?php echo $status_msg; ?></p>
+						<?php endif; ?>
+
+						<form name="signup-form" method="POST" action="">
+							<div style="margin-bottom: 10px;">
+								<input class="signup-input" type="email" name="email" placeholder="Enter your email..." title="Please enter a valid email address." required style="width: 100%;">
+							</div>
+							<div style="margin-bottom: 10px;">
+								<textarea class="signup-input" name="message" rows="4" placeholder="Enter your message..." style="width: 100%; padding-top: 15px; height: auto;"></textarea>
+							</div>
+							<button type="submit" name="submit_message" class="submit-btn" style="width: 100%;">GO</button>
 						</form>
 					</div>
 				</div>
