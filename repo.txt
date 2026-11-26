@@ -1,0 +1,14 @@
+INFORMASI REPO
+Nama Project Web-PHP
+
+Bahasa Program
+-HTML
+-CSS
+-Js
+
+Repositori GitHub:
+https://github.com/Callister157/Web-js-Tryagain.git
+Branch- newWeb-Js
+
+Deskripsi=
+Web-PHP prototype yang dikembangkan dari website dengan js. Dengan koneksi dengan database yang menyimpan informasi kontak dan juga menyimpan hasil voting yang dilakukan oleh client.
