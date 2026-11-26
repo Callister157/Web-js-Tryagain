@@ -40,6 +40,18 @@
 				</div>
 				<div class="col-md-8 col-md-offset-2">
 					<canvas id="canvasChart"></canvas>
+					<form id="voteForm" style="margin-top: 20px;">
+						<select name="label" id="voteLabel" class="form-control" required style="margin-bottom: 10px;">
+							<option value="">-- Choose a category --</option>
+							<option value="DSM">DSM</option>
+							<option value="Machine Learning">Machine Learning</option>
+							<option value="BSD">BSD</option>
+							<option value="Energi">Energi</option>
+							<option value="ElDA">ElDA</option>
+						</select>
+						<button type="submit" class="btn btn-primary">Vote</button>
+						<span id="voteMsg" style="margin-left: 10px;"></span>
+					</form>
 				</div>
 			</div>
 		</div>
